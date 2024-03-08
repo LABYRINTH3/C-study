@@ -1,5 +1,5 @@
-#include <iostream>
-using namespace std;
+//#include <iostream>
+//using namespace std;
 
 //int g =20;  /*전역변수*/
 //
@@ -190,13 +190,65 @@ using namespace std;
 //    return 0;
 //}
 
+//#include <iostream>
+//#include <string>
+//
+//int main() {
+//    std::string myString;
+//
+//    std::cin >> myString;
+//    std::cout << "String: " << myString << "\n" << 'a' << std::endl;
+//    return 0;
+//}
+
+//명품 cpp p89 5
+//#include <iostream>
+//#include <cstring>
+//
+//using namespace std;
+//int main(){
+//    char str[100];
+//    cin.getline(str, 100, '\n');
+//
+//    int num = strlen(str);
+//    cout << str << num << endl;
+//    int charNum = 0;
+//    for (int i = 0; i < num; ++i) {
+//        if (str[i]=='x')
+//            charNum++;
+//    }
+//    cout << charNum <<endl;
+//    return 0;
+//}
+
+//#include <iostream>
+//#include <cstring>
+//
+//using namespace std;
+//int main(){
+//    char name[100];
+//    char name1[100], name2[100], name3[100], name4[100], name5[100];
+//    int nameNum1 = 0, nameNum, nameNum3, nameNum4, nameNum5;
+//    cin.getline(name, 100,';');
+//    int nameLen = strlen(name);
+//    for (int i = 0; i < nameLen; ++i) {
+//        if (name[i]==';')
+//            nameNum = i;
+//        for (int j = nameNum1; j < nameNum; ++j) {
+//            name1
+//        }
+//        name1 =
+//    }
+//    return 0;
+//}
+
 #include <iostream>
-#include <string>
+class Circle{
+public:
+    int radius; //멤버함수
+    double getArea(); //멤버함수
+};
 
-int main() {
-    std::string myString;
-
-    std::cin >> myString;
-    std::cout << "String: " << myString << std::endl;
-    return 0;
+double Circle::getArea() {
+    return 3.14*radius*radius;
 }
