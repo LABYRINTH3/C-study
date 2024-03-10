@@ -242,13 +242,44 @@
 //    return 0;
 //}
 
+
+//class 연습
 #include <iostream>
+using namespace std;
+
 class Circle{
 public:
     int radius; //멤버함수
+    Circle(); //생성자
+    Circle(int r);
     double getArea(); //멤버함수
 };
 
 double Circle::getArea() {
     return 3.14*radius*radius;
+}
+
+//Circle::Circle() {
+//    radius = 5;
+//    cout << "radius " << radius << " make circle1" << endl;
+//}
+
+
+//생성자
+Circle::Circle() : Circle(5){}
+
+Circle::Circle(int r) {
+    radius = r;
+    cout << "radius " << radius << " make circle2" << endl;
+}
+
+int main(){
+    Circle circle1;
+    circle1.radius=5;
+    cout << circle1.getArea() << endl;
+
+    Circle circle2(30);
+    double area = circle2.getArea();
+    cout << "Area of the circle is " << area;
+    return 0;
 }
