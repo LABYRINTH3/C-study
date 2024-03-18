@@ -242,22 +242,22 @@
 //    return 0;
 //}
 
-
-//class 연습
-#include <iostream>
-using namespace std;
-
-class Circle{
-public:
-    int radius; //멤버함수
-    Circle(); //생성자
-    Circle(int r);
-    double getArea(); //멤버함수
-};
-
-double Circle::getArea() {
-    return 3.14*radius*radius;
-}
+//
+////class 연습
+//#include <iostream>
+//using namespace std;
+//
+//class Circle{
+//public:
+//    int radius; //멤버함수
+//    Circle(); //생성자
+//    Circle(int r);
+//    double getArea(); //멤버함수
+//};
+//
+//double Circle::getArea() {
+//    return 3.14*radius*radius;
+//}
 
 //Circle::Circle() {
 //    radius = 5;
@@ -265,21 +265,69 @@ double Circle::getArea() {
 //}
 
 
-//생성자
-Circle::Circle() : Circle(5){}
+////생성자
+//Circle::Circle() : Circle(5){}
+//
+//Circle::Circle(int r) {
+//    radius = r;
+//    cout << "radius " << radius << " make circle2" << endl;
+//}
+//
+//int main(){
+//    Circle circle1;
+//    circle1.radius=5;
+//    cout << circle1.getArea() << endl;
+//
+//    Circle circle2(30);
+//    double area = circle2.getArea();
+//    cout << "Area of the circle is " << area;
+//    return 0;
+//}
 
-Circle::Circle(int r) {
-    radius = r;
-    cout << "radius " << radius << " make circle2" << endl;
-}
 
-int main(){
-    Circle circle1;
-    circle1.radius=5;
-    cout << circle1.getArea() << endl;
+////클래스 연습
+//#include <iostream>
+//using namespace std;
+//
+//
+//class Cars{
+//private:
+//    string carBrand;
+//public:
+//    Cars(string &getCarBrand);
+//    int carPrice();
+//
+//};
+//
+//Cars::Cars(string &getCarBrand) {
+//    carBrand = getCarBrand;
+//    cout << "제 차는 "<< getCarBrand << "입니다."<<endl;
+//}
+//
+//int Cars::carPrice() {
+//    if (carBrand == "테슬라"){
+//        cout << carBrand << "의 가격은 " << "2000$ " << "입니다."<<endl;
+//        return 2000;
+//    }
+//
+//}
+//int main(){
+//    string myCarName = "테슬라";
+//    Cars car1(myCarName);
+//    int myCarPrice = car1.carPrice();
+//    if (myCarPrice < 3000)
+//        cout << "와 싸다";
+//    else
+//        cout << "와 비싸다";
+//    return 0;
+//}
 
-    Circle circle2(30);
-    double area = circle2.getArea();
-    cout << "Area of the circle is " << area;
-    return 0;
-}
+////char 연습
+//#include <iostream>
+//
+//int main(){
+//    char *str = "aa";
+//    std::cout << &str;
+//    return 0;
+//}
+
