@@ -1,0 +1,41 @@
+해당 main 파일의 코드는 default parameter을 지정했을때 생기는 딜레이를 측정하기 위한 코드입니다.
+최대한 공평하게 하기 위해 각각의 실험을 나눠서도 진행했으며 스로틀링을 방지하기 위해 충분한 시간을 두고 테스트 했습니다.
+그 결과 
+
+- 나눠서 진행하지 않은 테스트
+unsigned long iterations = 10,000;
+Time taken by function with default parameter: 8723 microseconds
+Time taken by function without default parameter: 8047 microseconds
+
+unsigned long iterations = 100,000;
+Time taken by function with default parameter: 92485 microseconds
+Time taken by function without default parameter: 85625 microseconds
+
+unsigned long iterations = 1,000,000;
+Time taken by function with default parameter: 882096 microseconds
+Time taken by function without default parameter: 844617 microseconds
+
+unsigned long iterations = 10,000,000;
+Time taken by function with default parameter: 8633737 microseconds
+Time taken by function without default parameter: 8698571 microseconds
+
+- 스로틀링이 있을것으로 추정
+unsigned long iterations = 100,000,000;
+Time taken by function with default parameter: 109485481 microseconds
+Time taken by function without default parameter: 118581466 microseconds
+
+
+- 스로틀링이 있었는지 확인하기 위해 반복문 순서 바꿔서
+unsigned long iterations = 100,000,000;
+Time taken by function with default parameter: 101,237,576 microseconds
+Time taken by function without default parameter: 92,210,809 microseconds
+
+
+- 스로틀링 때문에 느려지는 문제를 방지하기 위해 따로따로 충분한 시간을 두고
+unsigned long iterations = 100000000;
+Time taken by function with default parameter: 87,632,285 microseconds
+
+unsigned long iterations = 100000000;
+Time taken by function without default parameter: 85,746,571 microseconds
+
+라는 수치를 볼 수 있었고 default parameter를 지정했을때 2~3%정도의 시간상 손해를 본다는 점을 알게되었습니다.
