@@ -4,25 +4,25 @@
 
 - 나눠서 진행하지 않은 테스트
 unsigned long iterations = 10,000;
-Time taken by function with default parameter: 8723 microseconds
-Time taken by function without default parameter: 8047 microseconds
+Time taken by function with default parameter: 8,723 microseconds
+Time taken by function without default parameter: 8,047 microseconds
 
 unsigned long iterations = 100,000;
-Time taken by function with default parameter: 92485 microseconds
-Time taken by function without default parameter: 85625 microseconds
+Time taken by function with default parameter: 92,485 microseconds
+Time taken by function without default parameter: 85,625 microseconds
 
 unsigned long iterations = 1,000,000;
-Time taken by function with default parameter: 882096 microseconds
-Time taken by function without default parameter: 844617 microseconds
+Time taken by function with default parameter: 882,096 microseconds
+Time taken by function without default parameter: 844,617 microseconds
 
 unsigned long iterations = 10,000,000;
-Time taken by function with default parameter: 8633737 microseconds
-Time taken by function without default parameter: 8698571 microseconds
+Time taken by function with default parameter: 8,633,737 microseconds
+Time taken by function without default parameter: 8,698,571 microseconds
 
 - 스로틀링이 있을것으로 추정
 unsigned long iterations = 100,000,000;
-Time taken by function with default parameter: 109485481 microseconds
-Time taken by function without default parameter: 118581466 microseconds
+Time taken by function with default parameter: 109,485,481 microseconds
+Time taken by function without default parameter: 118,581,466 microseconds
 
 
 - 스로틀링이 있었는지 확인하기 위해 반복문 순서 바꿔서
