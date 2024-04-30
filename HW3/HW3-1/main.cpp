@@ -51,7 +51,7 @@ int main() {
     cout << "첫번째 배열의 수를 입력하시오: ";
     cin >> numArr;
     // 첫번째 배열을 입력 받는 코드입니다.
-    int arr_1[numArr];
+    int* arr_1 = new int[numArr];
     for (int i = 0; i < numArr; ++i) {
         cout << "첫번째 배열의 "<< i <<"번째 정수를 입력하시오: ";
         cin >> arr_1[i];
@@ -60,17 +60,17 @@ int main() {
 
     // 두번째 배열을 입력 받는 코드입니다.
     cout << "두번째 배열의 수는 " << numArr << "입니다." << endl;
-    int arr_2[numArr];
+    int* arr_2 = new int[numArr];
 
     for (int i = 0; i < numArr; ++i) {
         cout << "두번째 배열의 "<< i <<"번째 정수를 입력하시오: ";
         cin >> arr_2[i];
     }
-    int arr_3[4];
+    int* arr_3 = new int[numArr];
     add(arr_3, arr_1, arr_2, numArr);
 
     // 배열의 합의 결과를 출력하는 코드입니다.
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < numArr; i++) {
         cout << arr_3[i] << " ";
     }
     return 0;
