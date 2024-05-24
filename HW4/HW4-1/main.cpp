@@ -151,14 +151,13 @@ int main()
     Monster mon3 = mon1;
     if (mon2 == mon3) {
         cout << "it is same" << endl;
-    } else {
+    } 
+    else {
         cout << "it is not same" << endl;
     }
-
     mon2 = mon1;
     if (mon2 == mon1) {
-        cout << "mon2 is now same as mon1" << endl;
+        cout << "mon2 == mon1" << endl;
     }
-
     return 0;
 }
